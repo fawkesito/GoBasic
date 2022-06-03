@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"log"
+	"strconv"
 )
 
 // func main() {
@@ -163,22 +165,35 @@ import (
 
 func main() {
 
-	//for condicional
-	for i := 0; i <= 10; i++ {
-		fmt.Println(i)
+	// //for condicional
+	// for i := 0; i <= 10; i++ {
+	// 	fmt.Println(i)
+	// }
+
+	// //for while
+	// i := 0
+	// for i <= 10 {
+	// 	fmt.Println(i)
+	// 	i++
+	// }
+
+	// //for forever
+	// iForever := 0
+	// for {
+	// 	fmt.Println(iForever)
+	// 	iForever++
+	// }
+
+	//convertir texto a número
+	value, err := strconv.Atoi("53")
+	if err != nil {
+		log.Fatal(err)
 	}
 
-	//for while
-	i := 0
-	for i <= 10 {
-		fmt.Println(i)
-		i++
-	}
-
-	//for forever
-	iForever := 0
-	for {
-		fmt.Println(iForever)
-		iForever++
-	}
+	fmt.Println("Value is:", value)
+	userPassword("fawkes", "ola")
 }
+func userPassword(userName, password string) bool {
+	return userName == "fawkes" && password == "ola"
+}
+
