@@ -2,8 +2,6 @@ package main
 
 import (
 	"fmt"
-	"log"
-	"strconv"
 )
 
 // func main() {
@@ -163,37 +161,81 @@ import (
 // 	fmt.Println(b)
 // }
 
+// func main() {
+
+// 	// //for condicional
+// 	// for i := 0; i <= 10; i++ {
+// 	// 	fmt.Println(i)
+// 	// }
+
+// 	// //for while
+// 	// i := 0
+// 	// for i <= 10 {
+// 	// 	fmt.Println(i)
+// 	// 	i++
+// 	// }
+
+// 	// //for forever
+// 	// iForever := 0
+// 	// for {
+// 	// 	fmt.Println(iForever)
+// 	// 	iForever++
+// 	// }
+
+// 	//convertir texto a número
+// 	value, err := strconv.Atoi("53")
+// 	if err != nil {
+// 		log.Fatal(err)
+// 	}
+
+// 	fmt.Println("Value is:", value)
+// 	userPassword("fawkes", "ola")
+// }
+// func userPassword(userName, password string) bool {
+// 	return userName == "fawkes" && password == "ola"
+// }
+
+// func main() {
+
+// 	switch modulo := 4 % 2; modulo {
+// 	case 0:
+// 		fmt.Println("Es par")
+// 	default:
+// 		fmt.Println("Es impar")
+// 	}
+
+// 	//Sin condición
+// 	value := 50
+// 	switch {
+// 	case value > 100:
+// 		fmt.Println("Es mayor a 100")
+// 	case value < 0:
+// 		fmt.Println("Es menor a 0")
+// 	default:
+// 		fmt.Println("No condición")
+// 	}
+// }
+
 func main() {
+	//Defer
+	defer fmt.Println("Hola") // Ejecuta todo el codigo debajo y la deja para el final
+	fmt.Println("Mundo")
 
-	// //for condicional
-	// for i := 0; i <= 10; i++ {
-	// 	fmt.Println(i)
-	// }
+	//Continue y break
 
-	// //for while
-	// i := 0
-	// for i <= 10 {
-	// 	fmt.Println(i)
-	// 	i++
-	// }
+	for i := 0; i < 10; i++ {
+		fmt.Println(i)
 
-	// //for forever
-	// iForever := 0
-	// for {
-	// 	fmt.Println(iForever)
-	// 	iForever++
-	// }
+		//Continue
+		if i == 2 {
+			fmt.Println("ES 2")
+			continue
+		}
 
-	//convertir texto a número
-	value, err := strconv.Atoi("53")
-	if err != nil {
-		log.Fatal(err)
+		//Break
+		if i == 8 {
+			fmt.Println("Break")
+			break
+		}
 	}
-
-	fmt.Println("Value is:", value)
-	userPassword("fawkes", "ola")
 }
-func userPassword(userName, password string) bool {
-	return userName == "fawkes" && password == "ola"
-}
-
