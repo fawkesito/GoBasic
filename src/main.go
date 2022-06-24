@@ -216,26 +216,38 @@ import (
 // 	}
 // }
 
-func main() {
-	//Defer
-	defer fmt.Println("Hola") // Ejecuta todo el codigo debajo y la deja para el final
-	fmt.Println("Mundo")
+// func main() {
+// 	//Defer
+// 	defer fmt.Println("Hola") // Ejecuta todo el codigo debajo y la deja para el final
+// 	fmt.Println("Mundo")
 
-	//Continue y break
+// 	//Continue y break
 
-	for i := 0; i < 10; i++ {
-		fmt.Println(i)
+// 	for i := 0; i < 10; i++ {
+// 		fmt.Println(i)
 
-		//Continue
-		if i == 2 {
-			fmt.Println("ES 2")
-			continue
-		}
+// 		//Continue
+// 		if i == 2 {
+// 			fmt.Println("ES 2")
+// 			continue
+// 		}
 
-		//Break
-		if i == 8 {
-			fmt.Println("Break")
-			break
-		}
-	}
+// 		//Break
+// 		if i == 8 {
+// 			fmt.Println("Break")
+// 			break
+// 		}
+// 	}
+// }
+
+func split(num int) (x, y int) {
+	x = num * 4 / 9
+	y = num - x
+	return
 }
+
+func main() {
+	fmt.Println(split(50))
+}
+
+// Outside a function, every statement begins with a keyword, so := is not available outside a function
